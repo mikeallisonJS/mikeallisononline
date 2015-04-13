@@ -1,0 +1,189 @@
+<div id="changelog">
+    <a class="lead" data-toggle="collapse" data-parent="#changelog" href="#collapseOne">Changelog <i class="fa fa-angle-right" id="changelogIcon"></i></a>
+    <div id="collapseOne" class="collapse">
+        <blockquote>
+            <p>1.0.2</p>
+            <small>Fix auto-search throttling</small>
+        </blockquote>
+        <blockquote>
+            <p>1.0.1</p>
+            <small>Added pageCount observable</small>
+        </blockquote>
+        <blockquote>
+            <p>1.0.0</p>
+            <small>Initial Release</small>
+        </blockquote>
+    </div>
+</div>
+<br />
+
+<p class="lead">Install</p>
+<p><pre>(bower): bower install ko-datatable
+(optional) bower install jtablescroll
+
+(npm): npm install ko-datatable
+(optional) npm install jtablescroll
+
+(nuget): Package-Install KODataTable
+(optional): Package-Install jTableScroll</pre></p>
+
+<p class="lead">Html</p>
+<p>
+<pre class="prettyprint">
+&lt;div id="kodt">
+    &lt;div>
+        &lt;input type="text" data-bind="value: searchText, valueUpdate: 'afterkeydown'" />
+        &lt;select data-bind="value: selectedColumn, options: columns">&lt;/select>
+        &lt;button data-bind="click: search">Search&lt;/button>
+    &lt;/div>
+    &lt;div>
+        &lt;table class="jTableScroll">
+            &lt;thead>
+                &lt;tr data-bind="foreach: columns">
+                    &lt;th data-bind="text: $data,
+                        click: function() { $parent.sort($index()) }" style="cursor: pointer">&lt;/th>
+                &lt;/tr>
+            &lt;/thead>
+            &lt;tbody data-bind="foreach: currentRows">
+                &lt;tr data-bind="foreach: $parent.columns,
+                    click: function () { $root.selectRow($data); },
+                    css: { 'success': $root.selectedRow() == $data }">
+                    &lt;td data-bind="text: $parent[$data]" style="cursor: pointer">&lt;/td>
+                &lt;/tr>
+            &lt;/tbody>
+        &lt;/table>
+    &lt;/div>
+    &lt;div>
+        &lt;button data-bind="click: firstPage">First&lt;/button>
+        &lt;button data-bind="click: prevPage">Prev&lt;/button>
+        Page &lt;span data-bind="text: currentPage() + 1">&lt;/span> of &lt;span data-bind="text: pageCount">&lt;/span>
+        &lt;button data-bind="click: nextPage">Next&lt;/button>
+        &lt;button data-bind="click: lastPage">Last&lt;/button>
+    &lt;/div>
+&lt;/div>
+    </pre>
+</p>
+
+<p class="lead">Javascript</p>
+<p>
+<pre class="prettyprint">
+&lt;script src="KODataTable-1.0.2.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.jTableScroll-1.6.0.js"&gt;&lt;/script&gt;
+&lt;script>
+    var TableDataVM = new KODataTable({ options });
+    ko.applyBindings(TableDataVM, document.getElementById("kodt"));
+&lt;/script>
+    </pre>
+</p>
+
+<p class="lead">Options (JSON Object)</p>
+<p>
+<pre class="prettyprint">
+{
+columns: (Array[String]) List of columns - ex: ["Id","Name","Description"]
+rows: (Array[JSON Object]) Row data - ex: [{Id:1, Name: "Mike Allison", Description: "Desc 1"}]
+searchText: (string)(optional) initial search text
+currentPage: (integer)(optional) current starting page
+pageSize: (integer)(optional) number of rows to display (default: 20)
+tableHeight: (integer)(optional) height of result table if scrolling
+tableWidth: (integer)(optional) width of result table if scrolling
+autoSearch: (boolean)(optional) enable auto-search (default: true)
+firstFn: (function)(optional) function to perform on first page event
+nextFn: (function)(optional) function to perform on next page event
+prevFn: (function)(optional) function to perform on prev page event
+lastFn: (function)(optional) function to perform on last page event
+searchFn: (function)(optional) function to perform on search click event
+sortFn: (function)(optional) sort event function
+selectFn: (function)(optional) select event function
+}
+    </pre>
+</p>
+
+<p class="lead">Additional</p>
+<p>columns, rows, and selectedRow can all be set or accessed dynamically through your viewmodel. This can easily attached to external datasources such as webservices</p>
+<p><code>TableDataVM.rows(yourNewRowData);</code></p>
+
+<p class="lead">Example</p>
+<div class="panel panel-default" id="kodt">
+    <div class="panel-heading form-group form-inline">
+        <input type="text" class="form-control" data-bind="value: searchText, valueUpdate: 'afterkeydown'" />
+        <select class="form-control" data-bind="value: selectedColumn, options: columns"></select>
+        <button class="btn btn-default" data-bind="click: search">Search</button>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover jTableScroll">
+            <thead>
+            <tr data-bind="foreach: columns">
+                <th data-bind="text: $data, click: function() { $parent.sort($index()) }" style="cursor: pointer"></th>
+            </tr>
+            </thead>
+            <tbody data-bind="foreach: currentRows">
+            <tr data-bind="foreach: $parent.columns, click: function () { $root.selectRow($data); },  css: { 'success': $root.selectedRow() == $data }">
+                <td data-bind="text: $parent[$data]" style="cursor: pointer"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer text-center">
+        <button class="btn btn-default" data-bind="click: firstPage">First</button>
+        <button class="btn btn-default" data-bind="click: prevPage">Prev</button>
+        Page <span data-bind="text: currentPage() + 1"></span> of <span data-bind="text: pageCount"></span>
+        <button class="btn btn-default" data-bind="click: nextPage">Next</button>
+        <button class="btn btn-default" data-bind="click: lastPage">Last</button>
+    </div>
+</div>
+
+
+<hr />
+<footer>
+    <p class="text-muted">&copy; Mike Allison 2015</p>
+</footer>
+</div>
+</div>
+
+{{#contentFor "scripts"}}
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="/bower_components/knockout/dist/knockout.js"></script>
+<script src="/bower_components/jtablescroll/jquery.jTableScroll.js"></script>
+
+<script src="/bower_components/ko-datatable/KODataTable.js"></script>
+<script>
+    $('#collapseOne').on('shown.bs.collapse', function () {
+        $("#changelogIcon").removeClass("fa-angle-right").addClass("fa-angle-down");
+    });
+
+    $('#collapseOne').on('hidden.bs.collapse', function () {
+        $("#changelogIcon").removeClass("fa-angle-down").addClass("fa-angle-right");
+    });
+
+    var FirstNames = ["John", "Jane", "Richard", "Trista", "Mike"];
+    var LastNames = ["Doe", "Allison", "Wright", "Jones", "Smith"];
+
+    function FillTable() {
+        var rowData = [];
+        for (var i = 0; i < FirstNames.length; i++) {
+            for (var j = 0; j < LastNames.length; j++) {
+                var iCount = (i * FirstNames.length) + j;
+                rowData[iCount] =
+                {
+                    Id: iCount + 1,
+                    Name: FirstNames[i] + " " + LastNames[j],
+                    Description: "Description " + (iCount + 1)
+                };
+            }
+        }
+        TableDataVM.selectedRow(-1);
+        TableDataVM.rows(rowData);
+
+    }
+
+
+    var TableDataVM = new KODataTable(
+            {
+                columns: ["Id", "Name", "Description"],
+                tableHeight: 500
+            });
+    FillTable();
+    ko.applyBindings(TableDataVM, document.getElementById("kodt"));
+</script>
+{{/contentFor}}

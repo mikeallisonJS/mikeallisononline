@@ -1,0 +1,165 @@
+<div id="changelog">
+    <a class="lead" data-toggle="collapse" data-parent="#changelog" href="#collapseOne">Changelog <i class="fa fa-angle-right" id="changelogIcon"></i></a>
+    <div id="collapseOne" class="collapse">
+        <blockquote>
+            <p>1.0.1</p>
+            <small>Initial release.</small>
+        </blockquote>
+    </div>
+</div>
+<br />
+
+<p class="lead">Install</p>
+<p><pre>(bower): bower install angular-tablescroll
+(npm): npm install angular-tablescroll
+(nuget): Install-Package angular-tablescroll
+</pre></p>
+
+<p class="lead">Html</p>
+<p>
+<pre class="prettyprint">
+&lt;table ng-tablescroll=&quot;options&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+            &lt;td&gt;Data 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Foot 1&lt;/td&gt;
+            &lt;td&gt;Foot 2&lt;/td&gt;
+            &lt;td&gt;Foot 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+    </pre>
+</p>
+
+<p class="lead">Javascript</p>
+<p>
+<pre class="prettyprint">
+&lt;script src="angular-tablescroll.js"&gt;&lt;/script&gt;
+    </pre>
+</p>
+
+<p class="lead">Options (JSON Scope Object)</p>
+<p>
+<pre class="prettyprint">
+{
+reactive: (bool)(optional)(default: true) enable reactive sizing to parent control
+width: (int)(optional) desired max width in pixels
+height: (int)(optional) desired height in pixels
+backgroundcolor: (string)(optional)(default: #fffff) table header bg color
+}
+    </pre>
+</p>
+
+<p class="lead">Example</p>
+<div class="row well" ng-app="ngTablescrollSample">
+    <div class="col-md-6 table-bordered" style="height:300px">
+        <table ng-tablescroll class="table table-striped" style="background-color: #ffffff">
+            <thead>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+                <th>Col 4</th>
+                <th>Col 5</th>
+                <th>Col 6</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            <tr>
+                <td>asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            <tr>
+                <td>asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            <tr>
+                <td>asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            <tr>
+                <td>asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            <tr>
+                <td>asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            <tr>
+                <td>2asdfasdfasdfafsd</td>
+                <td>asdfasdfasdf</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+                <td>asdfasdfasdfasdgv</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="6">Footer Content</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="col-md-6 table-bordered">
+        another Bootstrap col-md-6
+    </div>
+</div>
+
+
+{{#contentFor "scripts"}}
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-tablescroll/angular-tablescroll.js"></script>
+    <script>
+        $('#collapseOne').on('shown.bs.collapse', function () {
+            $("#changelogIcon").removeClass("fa-angle-right").addClass("fa-angle-down");
+        });
+
+        $('#collapseOne').on('hidden.bs.collapse', function () {
+            $("#changelogIcon").removeClass("fa-angle-down").addClass("fa-angle-right");
+        });
+        angular.module('ngTablescrollSample', ['ngTablescroll']);
+    </script>
+{{/contentFor}}

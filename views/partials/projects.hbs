@@ -1,0 +1,18 @@
+<div>
+    <div class="page-header">
+        <h1 id="Projects" class="anchor-fix">Projects</h1>
+    </div>
+    {{#each projects}}
+    <h3 id="Projects-{{this.title}}" class="anchor-fix">{{this.title}}</h3>
+    <p>Website: <a href="Projects/{{this.url}}">Link</a></p>
+    <p>Description: {{this.description}}</p>
+    <p>Technology: {{this.categoryTitle}}</p>
+    <p>&nbsp;</p>
+    {{/each}}
+    <p class="pull-right"><a href="http://djmikeallison.com" target="_blank"><img src="/images/djmikeallisoncom.jpg" alt="djmikeallison.com" class="img-rounded" /></a></p>
+    <h3 id="Projects-1" class="anchor-fix">DJ Mike Allison</h3>
+    <p>Website: <a href="http://djmikeallison.com" target="_blank">djmikeallison.com</a></p>
+    <p>Technology: Bootstrap UI, jQuery, AJAX, JSON</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>

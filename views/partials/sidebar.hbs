@@ -1,0 +1,48 @@
+<div id="sidebar" class="bs-sidebar hidden-print affix hidden-sm hidden-xs" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="active"><a href="#Home">Home</a></li>
+        <li class="active"><a href="#Blog">Blog</a></li>
+        <li>
+            <a href="#Projects">Projects</a>
+            <ul class="nav">
+                {{#each projects}}
+                    <li><a href="#Projects-{{this.title}}">{{this.title}}</a></li>
+                {{/each}}
+                <li><a href="#Projects-1">djmikeallison.com</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#Resume">Resume</a>
+            <ul class="nav">
+                <li>
+                    <a href="#Skills">Proficiency</a>
+                    <ul class="nav">
+                        <li><a href="#Skills-Certifications">Certifications</a></li>
+                        <li><a href="#Skills-Technology">Technology</a></li>
+                        <li><a href="#Skills-Languages">Languages</a></li>
+                        <li><a href="#Skills-Frameworks">Frameworks</a></li>
+                        <li><a href="#Skills-Libraries">Libraries</a></li>
+                        <li><a href="#Skills-Testing">Testing</a></li>
+                        <li><a href="#Skills-Databases">Databases</a></li>
+                        <li><a href="#Skills-OS">Operating Systems</a></li>
+                        <li><a href="#Skills-Repositories">Repositories</a></li>
+                        <li><a href="#Skills-Software">Software</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Employment">Current Employment</a></li>
+                <li>
+                    <a href="#PastEmployment">Past Employment</a>
+                    <ul class="nav">
+                        <li><a href="#PastEmployment-1">Ecteon</a></li>
+                        <li><a href="#PastEmployment-2">Emdeon</a></li>
+                        <li><a href="#PastEmployment-3">Duthie Learning</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+</div>
+

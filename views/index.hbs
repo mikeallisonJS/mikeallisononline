@@ -1,0 +1,57 @@
+{{#contentFor "head"}}
+    <link rel='stylesheet' href='/style/sidebar.css' />
+{{/contentFor}}
+
+<div class="row">
+    <div class="col-md-3">
+        {{> sidebar}}
+    </div>
+    <div id="content" class="col-md-9" role="main">
+        <div id="Home" class="anchor-fix">
+            <div class="page-header well">
+                <span>
+                    <img src="/images/me.jpg" alt="photo" class="img-rounded" style="margin-right: 10px; margin-bottom: 10px" />
+                </span>
+
+                <span>
+                    <h1><nobr>Mike Allison</nobr></h1>
+                    <p><nobr>Web Application Architect & Lead Developer</nobr></p>
+                </span>
+            </div>
+        </div>
+        <div>
+            <div class="page-header">
+                <h1 id="Blog" class="anchor-fix">Blog</h1>
+            </div>
+            <p>Latest Posts: <span id="blogLoading">(Loading...)</span><br/>
+            <ul id="blogUL">
+            </ul>
+
+            </p>
+            <p>Website: <a href="http://mikeallisononline.wordpress.com" target="_blank">Link</a></p>
+            <p>Description: Site and Software updates posted here.</p>
+        </div>
+
+        {{> projects }}
+
+        {{> resume }}
+
+        <div>
+            <div class="page-header">
+                <h1 id="Contact" class="anchor-fix">Contact</h1>
+            </div>
+            <p>The simplest and safest way to contact me is through email at <a href="mailto:dj.mikeallison@gmail.com">dj.mikeallison@gmail.com</a>.</p>
+        </div>
+    </div>
+</div>
+{{#contentFor "scripts"}}
+<script>
+    $.getJSON("/api/WordPress").then(function (data) {
+        for (var i = 0; i < data.length; i = i + 2)
+        {
+            $('#blogUL').append('<li><a href="' + data[i + 1] +'" target="_blank">' + data[i] + '</a></li>');
+        }
+        $('#blogLoading').hide();
+    });
+</script>
+{{/contentFor}}
