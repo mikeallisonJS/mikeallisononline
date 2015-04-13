@@ -1,0 +1,92 @@
+{
+  "name": "knockback",
+  "version": "0.20.5",
+  "description": "Knockback.js provides Knockout.js magic for Backbone.js Models and Collections",
+  "main": "knockback.js",
+  "author": {
+    "name": "Kevin Malakoff",
+    "url": "https://github.com/kmalakoff"
+  },
+  "keywords": [
+    "knockback",
+    "knockbackjs",
+    "backbone",
+    "backbonejs",
+    "knockout",
+    "knockoutjs"
+  ],
+  "private": true,
+  "url": "http://kmalakoff.github.com/knockback/",
+  "homepage": "http://kmalakoff.github.com/knockback/",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/kmalakoff/knockback.git"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "docs": "./node_modules/.bin/codo -n Knockback.js -o doc src/."
+  },
+  "dependencies": {
+    "underscore": ">=1.1.7",
+    "backbone": ">=0.5.1",
+    "knockout": ">=2.1.0"
+  },
+  "devDependencies": {
+    "async": "*",
+    "chai": "*",
+    "codo": "2.x",
+    "coffee-loader": "*",
+    "coffee-script": "*",
+    "event-stream": "*",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-compile-js": "*",
+    "gulp-concat": "*",
+    "gulp-header": "*",
+    "gulp-mocha": "*",
+    "gulp-mocha-phantomjs": "*",
+    "gulp-rename": "*",
+    "gulp-shell": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-webpack-config": "*",
+    "gulp-wrap-amd-infer": "*",
+    "gulp-zip": "*",
+    "imports-loader": "*",
+    "jquery": "*",
+    "karma": "*",
+    "karma-chai": "*",
+    "karma-chrome-launcher": "*",
+    "karma-cli": "*",
+    "karma-coffee-preprocessor": "*",
+    "karma-firefox-launcher": "*",
+    "karma-mocha": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma-safari-launcher": "*",
+    "karma-spec-reporter": "*",
+    "mocha": "*",
+    "node-jquery-xhr": "*",
+    "nuget": "*",
+    "queue-async": "*",
+    "webpack": "*",
+    "wrench": "*"
+  },
+  "optionalDependencies": {
+    "jquery": "*",
+    "backbone-relational": "*",
+    "backbone-modelref": "*",
+    "lodash": "*",
+    "backbone-orm": "*",
+    "moment": "2.x",
+    "backbone-associations": "*",
+    "supermodel": "git+https://github.com/pathable/supermodel",
+    "parse": "*"
+  },
+  "jam": {
+    "dependencies": {
+      "underscore": ">=1.1.7",
+      "backbone": ">=0.5.1",
+      "knockout": ">=2.2.1"
+    }
+  }
+}
