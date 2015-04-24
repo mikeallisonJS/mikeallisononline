@@ -1,3 +1,4 @@
+exports.angularLodashString = require('./projects/angularLodashString')
 exports.angularTablescroll = require('./projects/angularTablescroll');
 exports.jTableScroll = require('./projects/jTableScroll');
 exports.KODataTable = require('./projects/KODataTable');
