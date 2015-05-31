@@ -21,7 +21,7 @@
     "angular-tablescroll": "~1.0.1",
     "font-awesome": "~4.3.0",
     "jtablescroll": "~1.6.0",
-    "ko-datatable": "~1.0.3",
+    "ko-datatable": "~1.0.4",
     "knockback": "~0.20.5",
     "angular-lodash-string": "~1.0.5"
   }
