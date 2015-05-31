@@ -1,0 +1,15 @@
+<div class="container">
+    {{> blog }}
+</div>
+
+{{#contentFor "scripts"}}
+    <script>
+        $.getJSON("/api/WordPress").then(function (data) {
+            for (var i = 0; i < data.length; i = i + 2)
+            {
+                $('#blogUL').append('<li><a href="' + data[i + 1] +'" target="_blank">' + data[i] + '</a></li>');
+            }
+            $('#blogLoading').hide();
+        });
+    </script>
+{{/contentFor}}

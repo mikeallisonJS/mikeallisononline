@@ -1,22 +1,20 @@
-<div id="changelog">
-    <a class="lead" data-toggle="collapse" data-parent="#changelog" href="#collapseOne">Changelog <i class="fa fa-angle-right" id="changelogIcon"></i></a>
-    <div id="collapseOne" class="collapse">
-        <blockquote>
-            <p>1.0.1</p>
-            <small>Initial release.</small>
-        </blockquote>
-    </div>
-</div>
-<br />
+<h5>Changelog</h5>
+<hr>
+<blockquote>
+    <p>1.0.1</p>
+    <small>Initial release.</small>
+</blockquote>
 
-<p class="lead">Install</p>
-<p><pre>(bower): bower install angular-tablescroll
+<h5>Install</h5>
+<hr>
+<pre class="prettyprint">
+(bower): bower install angular-tablescroll
 (npm): npm install angular-tablescroll
 (nuget): Install-Package angular-tablescroll
-</pre></p>
+</pre>
 
-<p class="lead">Html</p>
-<p>
+<h5>Html</h5>
+<hr>
 <pre class="prettyprint">
 &lt;table ng-tablescroll=&quot;options&quot;&gt;
     &lt;thead&gt;
@@ -41,18 +39,16 @@
         &lt;/tr&gt;
     &lt;/tfoot&gt;
 &lt;/table&gt;
-    </pre>
-</p>
+</pre>
 
-<p class="lead">Javascript</p>
-<p>
+<h5>Javascript</h5>
+<hr>
 <pre class="prettyprint">
 &lt;script src="angular-tablescroll.js"&gt;&lt;/script&gt;
-    </pre>
-</p>
+</pre>
 
-<p class="lead">Options (JSON Scope Object)</p>
-<p>
+<h5>Options (JSON Scope Object)</h5>
+<hr>
 <pre class="prettyprint">
 {
 reactive: (bool)(optional)(default: true) enable reactive sizing to parent control
@@ -60,13 +56,13 @@ width: (int)(optional) desired max width in pixels
 height: (int)(optional) desired height in pixels
 backgroundcolor: (string)(optional)(default: #fffff) table header bg color
 }
-    </pre>
-</p>
+</pre>
 
-<p class="lead">Example</p>
-<div class="row well" ng-app="ngTablescrollSample">
-    <div class="col-md-6 table-bordered" style="height:300px">
-        <table ng-tablescroll class="table table-striped" style="background-color: #ffffff">
+<h5>Example</h5>
+<hr>
+<div class="row" ng-app="ngTablescrollSample">
+    <div class="col s9" style="height:300px">
+        <table ng-tablescroll class="striped" style="background-color: #ffffff">
             <thead>
             <tr>
                 <th>Col 1</th>
@@ -142,24 +138,13 @@ backgroundcolor: (string)(optional)(default: #fffff) table header bg color
             </tfoot>
         </table>
     </div>
-    <div class="col-md-6 table-bordered">
-        another Bootstrap col-md-6
+    <div class="col s3">
+        Another Material Column
     </div>
 </div>
-
 
 {{#contentFor "scripts"}}
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-tablescroll/angular-tablescroll.js"></script>
-    <script>
-        $('#collapseOne').on('shown.bs.collapse', function () {
-            $("#changelogIcon").removeClass("fa-angle-right").addClass("fa-angle-down");
-        });
-
-        $('#collapseOne').on('hidden.bs.collapse', function () {
-            $("#changelogIcon").removeClass("fa-angle-down").addClass("fa-angle-right");
-        });
-        angular.module('ngTablescrollSample', ['ngTablescroll']);
-    </script>
 {{/contentFor}}

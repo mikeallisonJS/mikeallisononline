@@ -1,13 +1,16 @@
-<div>
-    <div class="page-header">
-        <h1 id="Projects" class="anchor-fix">Projects</h1>
+<div id="Projects" class="card anchor-fix">
+    <div class="card-title">
+        <span>Projects</span>
     </div>
     {{#each projects}}
-    <h3 id="Projects-{{this.title}}" class="anchor-fix">{{this.title}}</h3>
-    <p>Website: <a href="Projects/{{this.url}}">Link</a></p>
-    <p>Description: {{this.description}}</p>
-    <p>Technology: {{this.categoryTitle}}</p>
-    <p>&nbsp;</p>
+        <div class="card-content" id="Projects-{{this.title}}">
+            <h5>{{this.title}}</h5>
+            {{this.description}}
+        </div>
+        <div class="card-action">
+            {{this.categoryTitle}}
+            <span class="right"><a href="Projects/{{this.url}}">Link</a></span>
+        </div>
     {{/each}}
-    <p>&nbsp;</p>
 </div>
+

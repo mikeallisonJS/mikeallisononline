@@ -31,8 +31,10 @@ app.use('/bower_components', express.static(path.join(__dirname, 'bower_componen
 
 //routes
 app.use('/', routes);
-app.use('/users', users);
 require('./routes/projects')(app);
+require('./routes/contact')(app);
+require('./routes/resume')(app);
+require('./routes/blog')(app);
 require('./routes/api')(app);
 
 //helpers

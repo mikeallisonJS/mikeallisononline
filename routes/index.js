@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
         title: 'Home',
         description: 'A Lead Web Application Developer & Architect in Nashville, TN focusing on Node.JS, c#, .net, Angular, jQuery, Knockout, Bootstrap UI and other AJAX technologies.',
         projects: projects,
-        year: year
+        year: year,
+        isHome: true
     });
 });
 

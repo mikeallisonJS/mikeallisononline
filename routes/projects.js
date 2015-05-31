@@ -13,7 +13,9 @@ module.exports = function (app) {
             project: req.project,
             layout: 'project',
             description: req.project.description,
-            year: year
+            projects: projects,
+            year: year,
+            isProject: true
         });
     });
 
