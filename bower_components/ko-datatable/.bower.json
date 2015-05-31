@@ -1,6 +1,6 @@
 {
   "name": "ko-datatable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "authors": [
     "Mike Allison <dj.mikeallison@gmail.com>"
   ],
@@ -28,14 +28,14 @@
   "dependencies": {
     "knockout": ">=3.0.0"
   },
-  "_release": "1.0.3",
+  "_release": "1.0.4",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.3",
-    "commit": "2a8004850d9d55dfd01db27e49a6e6ac53496a0b"
+    "tag": "1.0.4",
+    "commit": "8d8c873fc8c6e9a74f93e1ba0ef80bbd9a789b98"
   },
   "_source": "git://github.com/mike-allison/KODataTable.git",
-  "_target": "~1.0.3",
+  "_target": "~1.0.4",
   "_originalSource": "ko-datatable",
   "_direct": true
 }

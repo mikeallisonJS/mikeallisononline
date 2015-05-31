@@ -61,7 +61,7 @@
           if ((_this.currentPage() + 1) * _this.pageSize() > _this.filteredRows().length) {
             return _this.filteredRows().slice(_this.currentPage() * _this.pageSize());
           } else {
-            return _this.filteredRows().slice(_this.currentPage() * _this.pageSize(), +((_this.currentPage() + 1 * _this.pageSize()) - 1) + 1 || 9e9);
+            return _this.filteredRows().slice(_this.currentPage() * _this.pageSize(), +(((_this.currentPage() + 1) * _this.pageSize()) - 1) + 1 || 9e9);
           }
         };
       })(this));
@@ -174,3 +174,5 @@
   })();
 
 }).call(this);
+
+//# sourceMappingURL=KODataTable.js.map
