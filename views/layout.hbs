@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Allison - {{title}}</title>
     <meta name="description" content="{{description}}" />
     <link rel='stylesheet' href='/bower_components/materialize/dist/css/materialize.min.css' />
@@ -11,21 +10,6 @@
     <link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.min.css' />
     {{{block "head"}}}
     <script src='/bower_components/modernizr/modernizr.js' ></script>
-    <!--<style>-->
-        <!--body {-->
-            <!--position: relative; /* For scrollyspy */-->
-            <!--padding-top: 50px; /* Account for fixed navbar */-->
-        <!--}-->
-
-        <!--.anchor-fix {-->
-            <!--padding-top: 60px;-->
-            <!--margin-top: -60px;-->
-        <!--}-->
-
-        <!--.inactive-child {-->
-            <!--opacity: 0;-->
-        <!--}-->
-    <!--</style>-->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -59,7 +43,7 @@
 </main>
 <footer class="page-footer">
     <div class="left">&copy; Mike Allison {{year}}</div>
-    <div class="right">Powered by Node.JS on <a href="https://www.digitalocean.com/?refcode=5055d4df6a13" target="_blank">DigitalOcean</a> </div>
+    <div class="right hide-on-med-and-down">Powered by Node.JS on <a href="https://www.digitalocean.com/?refcode=5055d4df6a13" target="_blank">DigitalOcean</a> </div>
 </footer>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
@@ -68,7 +52,6 @@
     $(document).ready(function () {
         $(".button-collapse").sideNav();
         $('.collapsible').collapsible();
-        $('.scrollspy').scrollSpy();
         $('select').material_select();
     });
     (function (i, s, o, g, r, a, m) {
