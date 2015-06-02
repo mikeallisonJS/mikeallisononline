@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var hbs = require('express-hbs');
-
+var compress = require('compression');
 var app = express();
 
 // view engine setup
@@ -11,6 +11,7 @@ app.engine('hbs', hbs.express4({
     partialsDir: __dirname + '/views/partials',
     defaultLayout: __dirname + '/views/layout'
 }));
+app.use(compress());
 app.set('view engine', 'hbs');
 
 app.use(favicon(__dirname + '/public/favicon.ico'));

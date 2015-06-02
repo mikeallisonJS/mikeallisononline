@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "compression": "^1.4.4",
     "debug": "~2.1.1",
     "express": "~4.12.2",
     "express-hbs": "^0.8.4",
