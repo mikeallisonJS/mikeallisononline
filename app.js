@@ -14,11 +14,13 @@ app.engine('hbs', hbs.express4({
 app.use(compress());
 app.set('view engine', 'hbs');
 
+
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/projects', express.static(path.join(__dirname, 'views/projects')));
-app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
+var cacheTime = 60*60*24;
+var staticOptions = {maxAge: cacheTime};
+app.use(express.static(path.join(__dirname, 'public'), staticOptions));
+app.use('/bower_components', express.static(path.join(__dirname, 'bower_components'), staticOptions));
 
 //routes
 require('./routes/index')(app);

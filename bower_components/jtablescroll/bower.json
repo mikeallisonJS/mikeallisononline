@@ -17,7 +17,7 @@
         "scroller"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/mike-allison/angular-tablescroll",
+    "homepage": "https://github.com/mike-allison/jTableScroll",
     "ignore": [
         "**/.*",
         "node_modules",
