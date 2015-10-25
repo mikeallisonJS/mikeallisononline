@@ -112,6 +112,3 @@ jQuery.fx = Tween.prototype.init;
 jQuery.fx.step = {};
 
 });
-
-
-});

@@ -1,7 +1,7 @@
 {
   "name": "angular-lodash-string",
   "main": "angular-lodash-string.js",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "homepage": "https://github.com/mike-allison/angular-lodash-string",
   "authors": [
     "Mike Allison <mike@mikeallisononline.com>"
@@ -24,14 +24,14 @@
     "underscore.string": ">=2.0.0",
     "lodash": ">=2.0.0"
   },
-  "_release": "1.0.5",
+  "_release": "1.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.5",
-    "commit": "11d142176d4dfe0ca1ff1393d7c97d76c67ba767"
+    "tag": "1.1.0",
+    "commit": "367101ba0f8e9c78c1a34d5e18d86cec11d62a54"
   },
   "_source": "git://github.com/mike-allison/angular-lodash-string.git",
-  "_target": "~1.0.5",
+  "_target": "~1.1.0",
   "_originalSource": "angular-lodash-string",
   "_direct": true
 }
