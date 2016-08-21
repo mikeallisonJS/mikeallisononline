@@ -1,1 +1,1 @@
-web: node ./bin/www
+web: npm i && ng build && node ./bin/www

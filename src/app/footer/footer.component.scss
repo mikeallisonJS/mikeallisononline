@@ -1,0 +1,17 @@
+footer {
+  background-color: #424242;
+  height: 64px;
+  display: flex;
+  width: 100vw;
+  padding-left: 8px;
+  padding-right: 8px;
+    > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    span.right {
+      text-align: right;
+    }
+  }
+}
