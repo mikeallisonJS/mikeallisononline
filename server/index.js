@@ -6,7 +6,7 @@ var app = express();
 
 app.use(compress());
 
-app.use(favicon(__dirname + '/../public/favicon.ico'));
+app.use(favicon(__dirname + '/../dist/favicon.ico'));
 
 var cacheTime = 60*60*24;
 var staticOptions = {maxAge: cacheTime};
