@@ -9,10 +9,6 @@ body {
 .container {
   display: flex;
   flex: 1 1 auto;
-  /*margin-left: auto;*/
-  /*//margin-right: auto;*/
-  /*padding-left:  15px;*/
-  /*padding-right: 15px;*/
   flex-direction: row;
   overflow-y: visible;
   justify-content: space-around;
