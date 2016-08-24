@@ -1,46 +1,35 @@
-<md-tab-group>
+<md-tab-group (selectChange)="changeRoute($event)">
   <md-tab>
     <template md-tab-label>
       <span class="home">
         Mike Allison
       </span>
     </template>
-    <template md-tab-content>
-      <app-home></app-home>
-    </template>
   </md-tab>
   <md-tab>
     <template md-tab-label>
       Blog
-    </template>
-    <template md-tab-content>
-      <app-blog></app-blog>
     </template>
   </md-tab>
   <md-tab>
     <template md-tab-label>
       Projects
     </template>
-    <template md-tab-content>
-      <app-projects></app-projects>
-    </template>
   </md-tab>
   <md-tab>
     <template md-tab-label>
       Resume
-    </template>
-    <template md-tab-content>
-      <app-resume></app-resume>
     </template>
   </md-tab>
   <md-tab>
     <template md-tab-label>
       Contact
     </template>
-    <template md-tab-content>
-      <app-contact></app-contact>
-    </template>
   </md-tab>
 </md-tab-group>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 
 <app-footer></app-footer>
