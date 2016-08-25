@@ -19,6 +19,7 @@ import {ProjectsComponent} from "./+projects/projects.component";
 import {MdTabsModule} from "@angular2-material/tabs";
 
 import { routing} from './routes';
+import { FourohfourComponent } from './fourohfour/fourohfour.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { routing} from './routes';
     ContactComponent,
     BlogComponent,
     ResumeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FourohfourComponent
   ],
   imports: [
     BrowserModule,

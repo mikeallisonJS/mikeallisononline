@@ -1,0 +1,20 @@
+div.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #9e9e9e;
+  > span {
+    text-align: center;
+    > img {
+      height: 38vh;
+    }
+    > h1 {
+      margin: 0 0 0 0 ;
+    }
+    > h2 {
+      margin: 0 0 0 0 ;
+    }
+  }
+}
