@@ -1,32 +1,20 @@
-<md-tab-group (selectChange)="changeRoute($event)">
-  <md-tab>
-    <template md-tab-label>
-      <span class="home">
+<nav md-tab-nav-bar>
+  <a md-tab-link [routerLink]="['/home']" routerLinkActive #rla1="routerLinkActive" [active]="rla1.isActive" class="home">
         Mike Allison
-      </span>
-    </template>
-  </md-tab>
-  <md-tab>
-    <template md-tab-label>
+  </a>
+  <a md-tab-link [routerLink]="['/blog']" routerLinkActive #rla2="routerLinkActive" [active]="rla2.isActive">
       Blog
-    </template>
-  </md-tab>
-  <md-tab>
-    <template md-tab-label>
+  </a>
+  <a md-tab-link [routerLink]="['/projects']" routerLinkActive #rla3="routerLinkActive" [active]="rla3.isActive">
       Projects
-    </template>
-  </md-tab>
-  <md-tab>
-    <template md-tab-label>
-      Resume
-    </template>
-  </md-tab>
-  <md-tab>
-    <template md-tab-label>
+  </a>
+  <a md-tab-link [routerLink]="['/resume']" routerLinkActive #rla4="routerLinkActive" [active]="rla4.isActive">
+    Resume
+  </a>
+  <a md-tab-link [routerLink]="['contact']" routerLinkActive #rla5="routerLinkActive" [active]="rla5.isActive">
       Contact
-    </template>
-  </md-tab>
-</md-tab-group>
+  </a>
+</nav>
 
 <div class="content">
   <router-outlet></router-outlet>

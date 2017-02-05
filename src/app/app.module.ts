@@ -1,25 +1,19 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
-import {MdButtonModule} from '@angular2-material/button';
-import {MdCardModule} from '@angular2-material/card';
-import {MdIconModule} from '@angular2-material/icon';
-import {MdListModule} from '@angular2-material/list';
-import {MdGridListModule} from '@angular2-material/grid-list';
-import {MdSidenavModule} from '@angular2-material/sidenav';
-import {MdToolbarModule} from '@angular2-material/toolbar';
-import {AppComponent}   from './app.component';
-import {FooterComponent} from "./footer/footer.component";
-import {HomeComponent} from "./+home/home.component";
-import {ContactComponent} from "./+contact/contact.component";
-import {BlogComponent} from "./+blog/blog.component";
-import {ResumeComponent} from "./+resume/resume.component";
-import {ProjectsComponent} from "./+projects/projects.component";
-import {MdTabsModule} from "@angular2-material/tabs";
+import 'hammerjs';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { routing} from './routes';
-import { FourohfourComponent } from './fourohfour/fourohfour.component';
+import { AppComponent } from './app.component';
+import {MaterialModule} from "@angular/material";
+import {FourohfourComponent} from "./fourohfour/fourohfour.component";
+import {ProjectsComponent} from "./+projects/projects.component";
+import {ResumeComponent} from "./+resume/resume.component";
+import {BlogComponent} from "./+blog/blog.component";
+import {ContactComponent} from "./+contact/contact.component";
+import {routing} from "./routes";
+import {HomeComponent} from "./+home/home.component";
+import {FooterComponent} from "./footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -37,16 +31,9 @@ import { FourohfourComponent } from './fourohfour/fourohfour.component';
     routing,
     FormsModule,
     HttpModule,
-    MdButtonModule,
-    MdIconModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdListModule,
-    MdGridListModule,
-    MdSidenavModule,
-    MdTabsModule
+    MaterialModule.forRoot()
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
