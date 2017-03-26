@@ -3,9 +3,7 @@ div.md-tab-header {
   color: #9e9e9e;
 }
 div.content {
-  background-image: url('/assets/images/footer_lodyas.png');
-  //display: flex;
-  //flex: auto;
+  //background-image: url('/assets/images/footer_lodyas.png');
   flex-direction: row;
   height: calc(100vh - 114px);
   overflow: auto !important;
