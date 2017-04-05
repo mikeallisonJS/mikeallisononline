@@ -1,9 +1,8 @@
 pipeline:
   build:
-    image: mhart/alpine-node
+    image: mikeallison/alpine-node
     commands:
-      - apk add --no-cache make gcc g++ python
-      - npm i -g yarn
-      - npm install -g @angular/cli
       - yarn
       - ng build --prod
+    when:
+      branch: master
