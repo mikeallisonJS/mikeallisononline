@@ -15,7 +15,7 @@ export class BlogComponent implements OnInit {
 		this.loadingText = '(Loading...';
 	}
   ngOnInit() {
-    this.http.get('/api/WordPress')
+    this.http.get('https://us-central1-mikeallisononline.cloudfunctions.net/feed')
       .map((res: Response) => res.json())
       .subscribe(
         (data: Response) => this.posts = data,
