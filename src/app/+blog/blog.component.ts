@@ -15,11 +15,11 @@ export class BlogComponent implements OnInit {
 		this.loadingText = '(Loading...';
 	}
   ngOnInit() {
-    this.http.get('/api/WordPress')
-      .map((res: Response) => res.json())
-      .subscribe(
-        (data: Response) => this.posts = data,
-        (err: Error) => this.loadingText = 'Unable to load WordPress data',
-        () => this.blogLoading = false);
+    // this.http.get('https://us-central1-mikeallisononline.cloudfunctions.net/feed')
+    //   .map((res: Response) => res.json())
+    //   .subscribe(
+    //     (data: Response) => this.posts = data,
+    //     (err: Error) => this.loadingText = 'Unable to load WordPress data',
+    //     () => this.blogLoading = false);
   }
 }

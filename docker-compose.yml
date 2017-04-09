@@ -1,5 +1,0 @@
-web:
-  build: .
-  dockerfile: Dockerfile.dock
-  ports:
-    - "80:3000"
