@@ -9,11 +9,11 @@ import {MaterialModule} from "@angular/material";
 import {FourohfourComponent} from "./fourohfour/fourohfour.component";
 import {ProjectsComponent} from "./+projects/projects.component";
 import {ResumeComponent} from "./+resume/resume.component";
-import {BlogComponent} from "./+blog/blog.component";
 import {ContactComponent} from "./+contact/contact.component";
 import {routing} from "./routes";
 import {HomeComponent} from "./+home/home.component";
 import {FooterComponent} from "./footer/footer.component";
+import {BlogModule} from "./+blog/blog.module";
 
 @NgModule({
   declarations: [
@@ -21,12 +21,12 @@ import {FooterComponent} from "./footer/footer.component";
     FooterComponent,
     HomeComponent,
     ContactComponent,
-    BlogComponent,
     ResumeComponent,
     ProjectsComponent,
     FourohfourComponent
   ],
   imports: [
+    BlogModule,
     BrowserModule,
     routing,
     FormsModule,
