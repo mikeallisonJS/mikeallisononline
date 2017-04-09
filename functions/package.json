@@ -2,10 +2,8 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
-    "feedparser": "^2.1.0",
     "firebase-admin": "~4.1.2",
-    "firebase-functions": "^0.5",
-    "request": "^2.74.0"
+    "firebase-functions": "^0.5"
   },
   "private": true
 }
