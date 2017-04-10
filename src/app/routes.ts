@@ -5,9 +5,11 @@ import {ResumeComponent} from "./+resume/resume.component";
 import {ContactComponent} from "./+contact/contact.component";
 import {Routes, RouterModule} from "@angular/router";
 import {FourohfourComponent} from "./fourohfour/fourohfour.component";
+import {AdminComponent} from "./+admin/admin.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'admin', component: AdminComponent},
   {path: 'home', component: HomeComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'projects', component: ProjectsComponent},

@@ -1,8 +1,8 @@
 import {NgModule} from "@angular/core";
-import { AngularFireModule } from 'angularfire2';
+import {AngularFireModule} from 'angularfire2';
 import {BlogComponent} from "./blog.component";
 
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: 'AIzaSyApUr9qfk1kmVl05hwBMvVKvOGz7-Ntvxg',
   authDomain: 'mikeallisononline.firebaseapp.com',
   databaseURL: 'https://mikeallisononline.firebaseio.com',

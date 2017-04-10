@@ -1,0 +1,13 @@
+<md-toolbar color="primary">
+    <span fxFlex>Admin</span>
+    <span *ngIf="user; else elseBlock">
+      <a href="javascript:;" (click)="logout()" mdTooltip="{{user.auth.email}}">
+        <img src="{{user.auth.photoURL}}" style="height: 60px" class="circle">
+      </a>
+    </span>
+    <ng-template #elseBlock>
+      <a href="javascript:;" (click)="login()">Login</a>
+    </ng-template>
+</md-toolbar>
+
+

@@ -14,6 +14,8 @@ import {routing} from "./routes";
 import {HomeComponent} from "./+home/home.component";
 import {FooterComponent} from "./footer/footer.component";
 import {BlogModule} from "./+blog/blog.module";
+import {AdminModule} from "./+admin/admin.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -26,8 +28,10 @@ import {BlogModule} from "./+blog/blog.module";
     FourohfourComponent
   ],
   imports: [
+    AdminModule,
     BlogModule,
     BrowserModule,
+    BrowserAnimationsModule,
     routing,
     FormsModule,
     HttpModule,
