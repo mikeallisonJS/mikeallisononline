@@ -13,26 +13,41 @@ import {ContactComponent} from "./+contact/contact.component";
 import {routing} from "./routes";
 import {HomeComponent} from "./+home/home.component";
 import {FooterComponent} from "./footer/footer.component";
-import {BlogModule} from "./+blog/blog.module";
-import {AdminModule} from "./+admin/admin.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AngularFireModule} from "angularfire2";
+import {AdminComponent} from "./+admin/admin.component";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {BlogComponent} from "./+blog/blog.component";
+import { ConfigComponent } from './+admin/config/config.component';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyApUr9qfk1kmVl05hwBMvVKvOGz7-Ntvxg',
+  authDomain: 'mikeallisononline.firebaseapp.com',
+  databaseURL: 'https://mikeallisononline.firebaseio.com',
+  projectId: "mikeallisononline",
+  storageBucket: 'mikeallisononline.appspot.com',
+  messagingSenderId: '658845182262'
+};
 
 @NgModule({
   declarations: [
+    AdminComponent,
     AppComponent,
+    BlogComponent,
     FooterComponent,
     HomeComponent,
     ContactComponent,
     ResumeComponent,
     ProjectsComponent,
-    FourohfourComponent
+    FourohfourComponent,
+    ConfigComponent
   ],
   imports: [
-    AdminModule,
-    BlogModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     BrowserModule,
     BrowserAnimationsModule,
     routing,
+    FlexLayoutModule,
     FormsModule,
     HttpModule,
     MaterialModule.forRoot()

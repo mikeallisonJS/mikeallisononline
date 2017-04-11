@@ -6,6 +6,7 @@ export const firebaseAuthConfig = {
   provider: AuthProviders.Google,
   method: AuthMethods.Redirect
 };
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -26,8 +27,6 @@ export class AdminComponent implements OnInit {
   logout() {
     this.af.auth.logout();
   }
-
   ngOnInit() {
   }
-
 }
