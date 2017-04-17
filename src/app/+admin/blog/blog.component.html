@@ -1,0 +1,21 @@
+<div fxLayout="row">
+  <md-list>
+    <md-list-item *ngFor="let blog of blogList | async">
+      {{blog.title}}
+    </md-list-item>
+  </md-list>
+  <form fxLayout="column" fxFlexFill>
+    <md-input-container>
+      <label for="title">Title</label>
+      <input mdInput id="title">
+    </md-input-container>
+    <md-input-container>
+      <label for="content">Content</label>
+      <textarea id="content" mdInput></textarea>
+    </md-input-container>
+    <div>
+      <button md-button (click)="getConfig()">Cancel</button>
+      <button md-button color="primary" (click)="save()">Save</button>
+    </div>
+  </form>
+</div>
