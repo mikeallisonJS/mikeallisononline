@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFire, AuthMethods, AuthProviders} from "angularfire2";
-
+// import * as $ from 'jquery';
+// window["$"] = $;
+// window["jQuery"] = $;
 
 export const firebaseAuthConfig = {
   provider: AuthProviders.Google,

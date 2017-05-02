@@ -11,6 +11,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
+import {FroalaEditorModule, FroalaViewModule} from "angular2-froala-wysiwyg";
+import { DatepickerModule } from "angular2-material-datepicker";
 
 @NgModule({
   imports: [
@@ -18,10 +20,13 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
+    DatepickerModule,
     FlexLayoutModule,
     FormsModule,
     routing,
-    MaterialModule
+    MaterialModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   exports: [
     RouterModule

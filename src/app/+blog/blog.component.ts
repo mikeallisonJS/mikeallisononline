@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {AngularFire} from "angularfire2";
 
 @Component({
   selector: 'app-blog',
@@ -7,19 +7,14 @@ import {Http, Response} from '@angular/http';
   styleUrls: ['blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-	posts: any;
-	blogLoading: boolean;
-	loadingText: string;
-	constructor(private http: Http) {
-		this.blogLoading = true;
-		this.loadingText = '(Loading...';
+  blogList;
+  user;
+	constructor(public af: AngularFire) {
+    this.af.auth.subscribe(auth => {
+      this.user = auth;
+    });
 	}
   ngOnInit() {
-    // this.http.get('https://us-central1-mikeallisononline.cloudfunctions.net/feed')
-    //   .map((res: Response) => res.json())
-    //   .subscribe(
-    //     (data: Response) => this.posts = data,
-    //     (err: Error) => this.loadingText = 'Unable to load WordPress data',
-    //     () => this.blogLoading = false);
+    this.blogList = this.af.database.list('/blog');
   }
 }
