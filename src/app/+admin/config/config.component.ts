@@ -5,7 +5,7 @@ import {MdSnackBar} from "@angular/material";
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
-  styleUrls: ['./config.component.css']
+  styleUrls: ['./config.component.scss']
 })
 export class ConfigComponent implements OnInit {
   config;

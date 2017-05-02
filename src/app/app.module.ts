@@ -18,9 +18,10 @@ import {AngularFireModule} from "angularfire2";
 import {AdminComponent} from "./+admin/admin.component";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BlogComponent} from "./+blog/blog.component";
-import { ConfigComponent } from './+admin/config/config.component';
+import {AdminModule} from "./+admin/admin.module";
+import {RouterModule} from "@angular/router";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: 'AIzaSyApUr9qfk1kmVl05hwBMvVKvOGz7-Ntvxg',
   authDomain: 'mikeallisononline.firebaseapp.com',
   databaseURL: 'https://mikeallisononline.firebaseio.com',
@@ -39,10 +40,10 @@ const firebaseConfig = {
     ContactComponent,
     ResumeComponent,
     ProjectsComponent,
-    FourohfourComponent,
-    ConfigComponent
+    FourohfourComponent
   ],
   imports: [
+    AdminModule,
     AngularFireModule.initializeApp(firebaseConfig),
     BrowserModule,
     BrowserAnimationsModule,
