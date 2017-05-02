@@ -1246,6 +1246,12 @@ debug@2.2.0, debug@~2.2.0:
   dependencies:
     ms "0.7.1"
 
+debug@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.3.tgz#40c453e67e6e13c901ddec317af8986cda9eff8c"
+  dependencies:
+    ms "0.7.2"
+
 debug@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
@@ -1761,7 +1767,7 @@ firebase@^3.9.0:
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-3.9.0.tgz#c4237f50f58eeb25081b1839d6cbf175f8f7ed9b"
   dependencies:
     dom-storage "^2.0.2"
-    faye-websocket "^0.11.1"
+    faye-websocket "0.9.3"
     jsonwebtoken "^7.3.0"
     promise-polyfill "^6.0.2"
     xmlhttprequest "^1.8.0"
@@ -2779,12 +2785,6 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-latest-version@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
-  dependencies:
-    package-json "^4.0.0"
-
 lazy-cache@^0.2.3:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-0.2.7.tgz#7feddf2dcb6edb77d11ef1d117ab5ffdf0ab1b65"
@@ -3147,12 +3147,6 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@2.x:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
-  dependencies:
-    brace-expansion "^1.0.0"
-
 minimist@0.0.8, minimist@~0.0.1:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
@@ -3493,15 +3487,6 @@ osenv@0, osenv@^0.1.4:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
-
-package-json@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/package-json/-/package-json-4.0.1.tgz#8869a0401253661c4c4ca3da6c2121ed555f5eed"
-  dependencies:
-    got "^6.7.1"
-    registry-auth-token "^3.0.1"
-    registry-url "^3.0.3"
-    semver "^5.1.0"
 
 pako@~0.2.0:
   version "0.2.9"
@@ -4184,19 +4169,6 @@ regexpu-core@^1.0.0:
     regjsgen "^0.2.0"
     regjsparser "^0.1.4"
 
-registry-auth-token@^3.0.1:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.3.0.tgz#57ae67347e73d96345ed1bc01294c7237c02aa63"
-  dependencies:
-    rc "^1.1.6"
-    safe-buffer "^5.0.1"
-
-registry-url@^3.0.3:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/registry-url/-/registry-url-3.1.0.tgz#3d4ef870f73dde1d77f0cf9a381432444e174942"
-  dependencies:
-    rc "^1.0.1"
-
 regjsgen@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/regjsgen/-/regjsgen-0.2.0.tgz#6c016adeac554f75823fe37ac05b92d5a4edb1f7"
@@ -4518,10 +4490,6 @@ shallow-clone@^0.1.2:
     kind-of "^2.0.1"
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
-
-sigmund@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
@@ -5386,17 +5354,9 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
-write-file-atomic@^1.1.2:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.4.tgz#f807a4f0b1d9e913ae7a48112e6cc3af1991b45f"
-  dependencies:
-    graceful-fs "^4.1.11"
-    imurmurhash "^0.1.4"
-    slide "^1.1.5"
-
-ws@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.0.1.tgz#7d0b2a2e58cddd819039c29c9de65045e1b310e9"
+ws@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
@@ -5408,9 +5368,9 @@ ws@^1.0.1:
     options ">=0.0.5"
     ultron "1.0.x"
 
-xdg-basedir@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
+wtf-8@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wtf-8/-/wtf-8-1.0.0.tgz#392d8ba2d0f1c34d1ee2d630f15d0efb68e1048a"
 
 xhr2@^0.1.4:
   version "0.1.4"
@@ -5527,10 +5487,10 @@ yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
-zone.js@^0.8.4:
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.8.tgz#354f02bb7241af834bb83b310308a89ad012d3af"
+yn@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/yn/-/yn-1.2.0.tgz#d237a4c533f279b2b89d3acac2db4b8c795e4a63"
 
-zone.js@^0.8.9:
+zone.js@^0.8.4, zone.js@^0.8.9:
   version "0.8.9"
   resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.9.tgz#34aaa9a3ec6d0e4acebd1b761adafa590473638b"
