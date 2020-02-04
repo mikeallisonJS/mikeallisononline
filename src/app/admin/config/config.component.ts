@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireDatabase} from '@angular/fire/database';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-config',
@@ -17,7 +17,7 @@ export class ConfigComponent implements OnInit {
   }
   getConfig() {
     this.changes = {};
-    this.config = this.af.object('/config');
+    this.config = this.af.object('/config').valueChanges();
   }
   change(key, value) {
     this.changes[key] = value;

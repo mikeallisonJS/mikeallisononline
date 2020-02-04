@@ -18,6 +18,6 @@ export class BlogComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.blogList = this.afd.list('/blog');
+    this.blogList = this.afd.list('/blog').valueChanges();
   }
 }

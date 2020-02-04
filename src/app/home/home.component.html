@@ -6,8 +6,8 @@
     </h1>
     <h2>Web Application Architect & Lead Developer</h2>
     <h3 *ngIf="config|async">
-      <fa-icon [icon]="faCircle" [class.red]="!(config|async)?.available" [class.green]="(config|async)?.available"></fa-icon>
-      <span *ngIf="!(config|async)?.available; else elseBlock">Not currently</span>
+      <fa-icon [icon]="faCircle" [class.red]="!config.available" [class.green]="config.available"></fa-icon>
+      <span *ngIf="!config.available; else elseBlock">Not currently</span>
       <ng-template #elseBlock>Currently</ng-template>
       available for new opportunities
     </h3>

@@ -16,7 +16,7 @@ export class BlogComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.blogList = this.af.list('/blog');
+    this.blogList = this.af.list('/blog').valueChanges();
   }
   select(post) {
     this.post = post;

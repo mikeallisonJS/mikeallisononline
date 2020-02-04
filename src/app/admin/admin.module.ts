@@ -3,15 +3,14 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { BlogComponent } from './blog/blog.component';
 import { ConfigComponent } from './config/config.component';
-import {
-  MatButtonModule,
-  MatDatepickerModule,
-  MatInputModule,
-  MatListModule,
-  MatSidenavModule,
-  MatSlideToggleModule, MatSnackBarModule,
-  MatToolbarModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import {RouterModule} from '@angular/router';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';

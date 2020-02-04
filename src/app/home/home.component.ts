@@ -8,7 +8,7 @@ import {faCircle} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  config;
+  config?;
   faCircle = faCircle;
   constructor(public af: AngularFireDatabase ) {
   }
@@ -16,6 +16,6 @@ export class HomeComponent implements OnInit {
     this.getConfig();
   }
   getConfig() {
-    this.config = this.af.object('/config');
+    this.config = this.af.object('/config').valueChanges();
   }
 }
