@@ -5,11 +5,12 @@
       Mike Allison
     </h1>
     <h2>Web Application Architect & Lead Developer</h2>
-    <h3 *ngIf="config|async">
+    <a href="mailto:dj.mikeallison@gmail.com"><h3>dj.mikeallison@gmail.com</h3></a>
+    <h3>(615) 738-0114</h3>
+    <h3 *ngIf="(config|async) as config">
       <fa-icon [icon]="faCircle" [class.red]="!config.available" [class.green]="config.available"></fa-icon>
-      <span *ngIf="!config.available; else elseBlock">Not currently</span>
-      <ng-template #elseBlock>Currently</ng-template>
-      available for new opportunities
+      <span *ngIf="config.available; else elseBlock">Currently available for remote opportunities</span>
+      <ng-template #elseBlock>Not currently available for new opportunities</ng-template>
     </h3>
   </div>
 </div>

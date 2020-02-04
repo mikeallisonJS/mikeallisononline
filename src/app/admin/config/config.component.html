@@ -1,4 +1,4 @@
-<p *ngIf="config|async">
+<p *ngIf="(config|async) as config">
   <mat-slide-toggle [ngModel]="config.available" (ngModelChange)="change('available', $event)">Available</mat-slide-toggle>
 </p>
 <button mat-button (click)="getConfig()">Cancel</button>
