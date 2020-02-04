@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 body {
   margin: 0;
   width: 100vw;
@@ -13,13 +12,6 @@ body {
   flex-direction: row;
   overflow-y: visible;
   justify-content: space-around;
-}
-
-
-/*fix for 2x fa md-icons*/
-md-icon.fa-2x {
-  padding-bottom: 10px;
-  padding-right: 12px;
 }
 
 .circle {

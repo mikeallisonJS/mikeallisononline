@@ -1,8 +1,0 @@
-<div *ngFor="let blog of blogList | async" >
-  <div *ngIf="blog.enabled">
-    <h1>{{blog.title}}</h1>
-    <h5>Posted on {{blog.created | date: 'fullDate'}} by Mike Allison</h5>
-    <div [innerHTML]="blog.content"></div>
-    <a *ngIf="user" routerLink="/admin/blog">edit</a>
-  </div>
-</div>

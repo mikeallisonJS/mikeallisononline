@@ -1,9 +1,8 @@
-div.md-tab-header {
+div.mat-tab-header {
   background-color: #424242;
   color: #9e9e9e;
 }
 div.content {
-  //background-image: url('/assets/images/footer_lodyas.png');
   flex-direction: row;
   height: calc(100vh - 114px);
   overflow: auto !important;

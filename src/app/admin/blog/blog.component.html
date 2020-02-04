@@ -1,0 +1,28 @@
+<div fxLayout="row">
+  <div>
+    <mat-list>
+      <mat-list-item *ngFor="let blog of blogList | async">
+        <a (click)="select(blog)">{{blog.title}}</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a (click)="create()">Create new</a>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div>
+    <form fxLayout="column" fxFlexFill *ngIf="post">
+      <mat-slide-toggle name="enable" [(ngModel)]="post.enabled">Enable</mat-slide-toggle>
+      <mat-form-field>
+        <label for="title">Title</label>
+        <input matInput id="title" name="title" [(ngModel)]="post.title">
+      </mat-form-field>
+      <mat-datepicker [(ngModel)]="post.date"></mat-datepicker>
+      <label for="content">Content</label>
+      <div id="content" [froalaEditor] [(froalaModel)]="post.content"></div>
+      <div>
+        <button mat-button (click)="cancel()">Cancel</button>
+        <button mat-button color="primary" (click)="save()">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

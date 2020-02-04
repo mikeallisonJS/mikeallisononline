@@ -1,17 +1,10 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {Routes} from "@angular/router";
-import {routes} from "./routes";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  private routes: Routes;
-  constructor(
-  ) {
-    this.routes = routes;
-  }
+  title = 'mikeallisononline-ng8';
 }
