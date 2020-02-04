@@ -123,6 +123,10 @@
               "devServerTarget": "mikeallisononline-ng8:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireDatabase} from '@angular/fire/database';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-config',
@@ -8,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./config.component.scss']
 })
 export class ConfigComponent implements OnInit {
+  configObject;
   config;
   changes;
   constructor(public af: AngularFireDatabase, public snackBar: MatSnackBar) {
@@ -17,7 +19,8 @@ export class ConfigComponent implements OnInit {
   }
   getConfig() {
     this.changes = {};
-    this.config = this.af.object('/config').valueChanges();
+    this.configObject = this.af.object('/config');
+    this.config = this.configObject.valueChanges();
   }
   change(key, value) {
     this.changes[key] = value;
@@ -28,7 +31,7 @@ export class ConfigComponent implements OnInit {
     });
   }
   save() {
-    this.config.update(this.changes).then(() => {
+    this.configObject.update(this.changes).then(() => {
       this.openSnackBar('Success', 'Done');
     }).catch(() => {
       this.openSnackBar('Fail', 'Done');

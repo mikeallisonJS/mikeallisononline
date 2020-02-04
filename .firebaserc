@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "mikeallisononline"
+  },
+  "targets": {
+    "mikeallisononline": {
+      "hosting": {
+        "mikeallisononline-ng8": [
+          "mikeallisononline"
+        ]
+      }
+    }
   }
 }
